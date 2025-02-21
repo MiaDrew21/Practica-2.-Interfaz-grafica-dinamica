@@ -29,8 +29,8 @@ namespace interfazGrafica
         private void CargarImagenes()
         {
             // Obtener el directorio del programa y la carpeta "imag"
-            string directorioRaiz = Application.StartupPath;
-            string rutaCarpetaImagenes = Path.Combine(directorioRaiz, "imag");
+            string directorioRaiz = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
+            string rutaCarpetaImagenes = Path.Combine(directorioRaiz, "Practica-2.-Interfaz-grafica-dinamica", "imag");
 
             // Verificar si la carpeta existe
             if (!Directory.Exists(rutaCarpetaImagenes))
